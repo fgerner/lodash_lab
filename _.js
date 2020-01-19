@@ -30,6 +30,9 @@ const _ = {
         } else {
             return false
         }
+    },
+    words(word){
+        return word.split(' ')
     }
 }
 
