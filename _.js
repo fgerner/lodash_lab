@@ -9,6 +9,27 @@ const _ = {
         } else {
             return lo
         }
+    },
+    inRange(num, lo, hi) {
+        if (hi == null) {
+            if (num < lo) {
+                return true
+            } else {
+                return false
+            }
+        }
+        if(lo > hi){
+            temp = hi
+            hi = lo
+            lo = temp
+        }
+        if(num > lo && num < hi){
+            return true
+        } else if (num == lo) {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
