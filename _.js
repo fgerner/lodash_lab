@@ -33,6 +33,25 @@ const _ = {
     },
     words(word){
         return word.split(' ')
+    },
+
+    pad(word, padding) {
+        if(word.length >= padding){
+            return word
+        }
+        if(word.length < padding) {
+            paddedstring = '';
+            padstart = Math.floor((padding - word.length) / 2);
+            padfinnish = padding - word.length - padstart;
+            for(let i = 0; i<padstart; i++){
+                paddedstring += ' ';
+            }
+            paddedstring += word;
+            for(let i = 0; i < padfinnish; i++) {
+                paddedstring += ' '
+            }
+            return paddedstring;
+        }
     }
 }
 

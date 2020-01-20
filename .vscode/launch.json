@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Test",
-            "program": "${workspaceFolder}/test/lodash.js",
+            "program": "${workspaceFolder}/test/pad.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
