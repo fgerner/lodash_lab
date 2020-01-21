@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Test",
-            "program": "${workspaceFolder}/test/has.js",
+            "program": "${workspaceFolder}/test/invert.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
