@@ -74,15 +74,30 @@ const _ = {
     },
 
     findKey(object, predicate) {
-        for(let key in object){
+        for (let key in object) {
             let value = object[key]
             let predicateReturnValue = predicate(value);
-            if(predicateReturnValue){
+            if (predicateReturnValue) {
                 return key;
             };
         };
         undefined
         return undefined
+    },
+
+    drop(arr, n) {
+        if (n === undefined) {
+            n = 1;
+        }
+        let droppedArray = arr.slice(n, arr.length);
+        return droppedArray;
+    },
+
+    dropWhile(arr, predicate) {
+        const cb = (element, index) => { return !predicate(element, index, arr) };
+        let dropNumber = arr.findIndex(cb);
+        let droppedArray = this.drop(arr, dropNumber);
+        return droppedArray;
     }
 
 }
